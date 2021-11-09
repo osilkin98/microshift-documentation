@@ -1,0 +1,306 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Local Development - MicroShift.io</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=icon href=https://microshift.io/favicon.png>
+<link rel=stylesheet href=/css/style.min.6719d72e323121369d5caeb4264b95d8a63cf1deaab029da67602fe5a046e0a4.css>
+<link rel=stylesheet href=/css/admonition.min.d6eb578b3fe0c600dbd09a9bd27c5df86cbb30bbe9c9490df10f3ff46bd49a5b.css>
+<link rel=stylesheet href=/css/search.min.b3a567381af326a096422275c22a08b280ce4129812d6644a4f27053e5324303.css>
+</head>
+<body class="page page-default-single">
+<div id=main-menu-mobile class=main-menu-mobile>
+<ul>
+<li class="menu-item-🏠 home">
+<a href=/>
+<span>🏠 Home</span>
+</a>
+</li>
+<li class="menu-item-📚 microshift">
+<a href=/docs>
+<span>📚 MicroShift</span>
+</a>
+</li>
+<li class="menu-item-📚 about">
+<a href=/docs/about/about>
+<span>📚 About</span>
+</a>
+</li>
+<li class="menu-item-🧭 getting started">
+<a href=/docs/getting-started>
+<span>🧭 Getting Started</span>
+</a>
+</li>
+<li class="menu-item-⛑️ user documentation">
+<a href=/docs/user-documentation/>
+<span>⛑️ User Documentation</span>
+</a>
+</li>
+<li class="menu-item-🖥️ developer documentation">
+<a href=/docs/developer-documentation>
+<span>🖥️ Developer Documentation</span>
+</a>
+</li>
+<li class="menu-item-❤️ community">
+<a href=/docs/community/community>
+<span>❤️ Community</span>
+</a>
+</li>
+<li class="menu-item-🔍 search">
+<a href=/search>
+<span>🔍 Search</span>
+</a>
+</li>
+</ul>
+</div>
+<div class=wrapper>
+<div class=header>
+<div class=container>
+<div class=logo>
+<a href=https://microshift.io><img alt=Logo src=/images/logo.svg></a>
+</div>
+<div class=logo-mobile>
+<a href=https://microshift.io><img alt=Logo src=/images/logo-mobile.svg></a>
+</div>
+<div id=main-menu class=main-menu>
+<ul>
+<li class="menu-item-🏠 home">
+<a href=/>
+<span>🏠 Home</span>
+</a>
+</li>
+<li class="menu-item-📚 microshift">
+<a href=/docs>
+<span>📚 MicroShift</span>
+</a>
+</li>
+<li class="menu-item-📚 about">
+<a href=/docs/about/about>
+<span>📚 About</span>
+</a>
+</li>
+<li class="menu-item-🧭 getting started">
+<a href=/docs/getting-started>
+<span>🧭 Getting Started</span>
+</a>
+</li>
+<li class="menu-item-⛑️ user documentation">
+<a href=/docs/user-documentation/>
+<span>⛑️ User Documentation</span>
+</a>
+</li>
+<li class="menu-item-🖥️ developer documentation">
+<a href=/docs/developer-documentation>
+<span>🖥️ Developer Documentation</span>
+</a>
+</li>
+<li class="menu-item-❤️ community">
+<a href=/docs/community/community>
+<span>❤️ Community</span>
+</a>
+</li>
+<li class="menu-item-🔍 search">
+<a href=/search>
+<span>🔍 Search</span>
+</a>
+</li>
+</ul>
+</div>
+<button id=toggle-main-menu-mobile class="hamburger hamburger--slider" type=button>
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+</div>
+</div>
+<div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+<div class=row>
+<div class="col-12 col-md-3 mb-3">
+<div class=sidebar>
+<aside>
+<ul>
+<li>
+<a href=/>
+<span>🏠 Home</span>
+</a>
+</li>
+<li>
+<a href=/docs>
+<span>📚 MicroShift</span>
+</a>
+</li>
+<li>
+<a href=/docs/about/about>
+<span>📚 About</span>
+</a>
+</li>
+<li>
+<a href=/docs/getting-started>
+<span>🧭 Getting Started</span>
+</a>
+</li>
+<li>
+<a href=/docs/user-documentation/>
+<span>⛑️ User Documentation</span>
+</a>
+</li>
+<li>
+<a href=/docs/developer-documentation>
+<span>🖥️ Developer Documentation</span>
+</a>
+</li>
+<li>
+<a href=/docs/community/community>
+<span>❤️ Community</span>
+</a>
+</li>
+<li>
+<a href=/search>
+<span>🔍 Search</span>
+</a>
+</li>
+</ul>
+</aside>
+</div>
+</div>
+<div class="col-12 col-md-9">
+<h1 class=title>Local Development</h1>
+<div class=content>
+<h3 id=build-dependencies>Build Dependencies</h3>
+<p>Install the required binaries:</p>
+<ul>
+<li><code>git</code></li>
+<li><code>make</code></li>
+<li><code>golang</code></li>
+<li><code>glibc</code></li>
+<li><code>podman</code> # if building containerized, as recommended</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=c1># Fedora/CentOS</span>
+sudo dnf install <span class=se>\
+</span><span class=se></span>    git <span class=se>\
+</span><span class=se></span>    make <span class=se>\
+</span><span class=se></span>    golang <span class=se>\
+</span><span class=se></span>    glibc-static
+
+<span class=c1># Ubuntu</span>
+sudo apt install <span class=se>\
+</span><span class=se></span>    <span class=c1>#git \</span>
+    build-essential <span class=se>\ </span>  <span class=c1># provides Make</span>
+    golang-go <span class=se>\
+</span><span class=se></span>    glibc
+</code></pre></div><p>To install podman and build containerized MicroShift (recommended), find the appropriate guide for your respective system:
+<a href=https://podman.io/getting-started/installation>Install Podman</a></p>
+<h3 id=building-microshift-in-linux-container-recommended>Building MicroShift In Linux Container (recommended)</h3>
+<p>Build a container image with the MicroShift binary using Podman or Docker:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>make microshift
+podman images <span class=c1># note the microshift image name, or `podman tag, push` to tag or push to a registry</span>
+</code></pre></div><p>The built image can then be run by replacing the latest released image name (<code>quay.io/microshift/microshift:4.7.0-0.microshift-2021-08-31-224727-linux-amd64</code>) in the MicroShift-Containerized documentation with the locally built image name.</p>
+<h3 id=building-microshift-on-the-host>Building MicroShift on the Host</h3>
+<p>MicroShift can be built directly on the host after installing the build-time dependencies. When using RHEL ensure the system is registered and run the following before installing the prerequisites.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=nv>ARCH</span><span class=o>=</span><span class=k>$(</span> /bin/arch <span class=k>)</span>
+sudo subscription-manager repos --enable <span class=s2>&#34;codeready-builder-for-rhel-8-</span><span class=si>${</span><span class=nv>ARCH</span><span class=si>}</span><span class=s2>-rpms&#34;</span>
+</code></pre></div><p>Next clone the repository and cd into it, then build with <code>make</code>:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>git clone https://github.com/redhat-et/microshift.git
+<span class=nb>cd</span> microshift
+make build
+</code></pre></div><div class="admonition warning">
+<p class=admonition-title>Warning</p>
+<p class=admonition>when building or running <strong>ARM64</strong> container images, Linux host environments must have the <code>qemu-user-static</code> package installed. E.g. on Fedora: <code>dnf install qemu-user-static</code>.</p>
+</div>
+<h3 id=running-microshift-locally>Running MicroShift Locally</h3>
+<p>It is recommended to run from a container, but it is possible to run the MicroShift binary locally with
+the following commands. First, run the install script to prepare the host environment.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=nb>cd</span> microshift
+<span class=nv>CONFIG_ENV_ONLY</span><span class=o>=</span><span class=nb>true</span> ./install.sh
+sudo ./microshift run
+</code></pre></div><h2 id=optional-developing-with-vagrant>(optional) Developing with Vagrant</h2>
+<p>It is possible to use Vagrant for VM provisioning, however it is not necessary.</p>
+<p>Find a guide on how to install it for your system <a href=https://www.vagrantup.com/downloads>here</a>.</p>
+<p>Once Vagrant is installed, create a Vagrant box for the operating
+system of choice. For this example we will be looking at a <a href=https://app.vagrantup.com/fedora/boxes/34-cloud-base>fedora 34 cloud
+image</a>, however you can substitute any vagrant image of your choice.</p>
+<p>First, navigate to the MicroShift directory on your host system, or another designated
+directory where we will be storing the <code>Vagrantfile</code>.</p>
+<p>Next, download the vagrant image. For this example we will use
+a fedora 34 cloud image:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>vagrant box add fedora/34-cloud-base
+</code></pre></div><p>Depending on the image, Vagrant will ask you to select a Virtualization provider,
+just select the first one.</p>
+<p>Once that downloads, initialize the repository for launching your image:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>vagrant init fedora/34-cloud-base
+</code></pre></div><p>Running this command will create a <code>Vagrantfile</code> in your working directory which
+is used to configure your vagrant box.</p>
+<p>Before starting the Vagrant box, increase the amount of RAM available to the system.
+To do this, edit the <code>Vagrantfile</code> and configure your provider settings to include
+the following:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-rb data-lang=rb>    <span class=n>config</span><span class=o>.</span><span class=n>vm</span><span class=o>.</span><span class=n>provider</span> <span class=s2>&#34;libvirt&#34;</span> <span class=k>do</span> <span class=o>|</span><span class=n>v</span><span class=o>|</span>
+        <span class=c1># provides 3GB of memory</span>
+        <span class=n>v</span><span class=o>.</span><span class=n>memory</span> <span class=o>=</span> <span class=mi>3072</span>
+        <span class=c1># for parallelization</span>
+        <span class=n>v</span><span class=o>.</span><span class=n>cpus</span> <span class=o>=</span> <span class=mi>2</span>
+    <span class=k>end</span>
+</code></pre></div><p>The value of <code>config.vm.provider</code> depends on the provider you selected when you
+ran <code>vagrant add</code> earlier. For example, if you selected <code>virtualbox</code> then the first
+line should be: <code>config.vm.provider "virtualbox" do |v|</code></p>
+<p>Now start the VM:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>vagrant up
+</code></pre></div><p>Once the VM is up, connect to it:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>vagrant ssh
+</code></pre></div><p>Once ssh&rsquo;d into the vagrant instance, return to the <a href=#build-dependencies>Build Dependencies section</a>
+to begin local development.</p>
+<h3 id=extra-optional-connecting-vscode-to-vagrant>(Extra Optional) Connecting VSCode to Vagrant</h3>
+<p>If using VSCode, you can connect to your vagrant box with a few extra steps.</p>
+<h4 id=increasing-memory-requirements>Increasing Memory Requirements</h4>
+<p>Since VSCode leans more on the heavy side of development, the RAM usage on your Vagrant environment
+can go up to 5GB, and therefore we will need to modify the <code>Vagrantfile</code> to
+increase the amount of available RAM from 3GB to 5GB (or 6GB if you want to be safe).
+To do this, set <code>v.memory</code> to the following in your <code>Vagrantfile</code>:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-rb data-lang=rb>        <span class=c1># provides 5GB of memory</span>
+        <span class=n>v</span><span class=o>.</span><span class=n>memory</span> <span class=o>=</span> <span class=mi>5120</span>
+        <span class=c1># provides 6GB of memory</span>
+        <span class=n>v</span><span class=o>.</span><span class=n>memory</span> <span class=o>=</span> <span class=mi>6144</span>
+</code></pre></div><h4 id=setting-up-an-ssh-profile>Setting up an SSH Profile</h4>
+<p>First we need to ask Vagrant for an SSH config file. From your host machine, run:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>vagrant ssh-config &gt; ssh-config.conf
+</code></pre></div><p><em>You can edit the <code>ssh-config.conf</code> file to change the hostname from <code>default</code> to
+<code>vagrant</code> to be more easily identifiable, but that&rsquo;s up to you. :)</em></p>
+<p>Here&rsquo;s an example of a working SSH config file:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Host default
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /path/to/microshift/.vagrant/machines/default/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+</code></pre></div><p>Next, you&rsquo;ll want to install the <code>Remote - SSH</code> extension from the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">VSCode Marketplace</a></p>
+<p>With the extension installed, you&rsquo;ll click on the green bottom in the bottom-left
+corner of VSCode to open a dropdown menu for SSH options:</p>
+<p><img src=../../../pics/vscode-remote-button.png alt="VSCode Remote Button"></p>
+<p>Select the option to open an SSH configuration file:
+<img src=../../../pics/remote-ssh-dropdown.png alt="Dropdown Menu"></p>
+<p>Next you&rsquo;ll want to navigate to the &ldquo;Remote Explorer&rdquo; tab on the left-hand side
+of VSCode, then select on the vagrant target (default if you haven&rsquo;t renamed it)
+and click on the button to connect to it in a remote window.</p>
+<p><em>(Credits to Andrés Lopez for this guide: <a href=https://medium.com/@lopezgand/connect-visual-studio-code-with-vagrant-in-your-local-machine-24903fb4a9de>Connect Visual Studio Code with Vagrant in your local machine
+</a>)</em></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<center>
+<a class=github-button href=https://github.com/redhat-et/microshift data-icon=octicon-cloud-download aria-label="redhat-et/microshift on GitHub">MicroShift</a>
+<a class=github-button href=https://github.com/redhat-et/microshift data-icon=octicon-star aria-label="Star redhat-et/microshift on GitHub">Star</a>
+<a class=github-button href=https://github.com/redhat-et/microshift/fork data-icon=octicon-repo-forked aria-label="Fork redhat-et/microshift on GitHub">Fork</a>
+<a class=github-button href=https://github.com/redhat-et/microshift/issues data-icon=octicon-issue-opened aria-label="Issue redhat-et/microshift on GitHub">Issue</a>
+<p>Built with <a href=https://github.com/zerostaticthemes/hugo-whisper-theme>whisper-theme</a> from <a href=http://gohugo.io/>Hugo</a></p>
+</center>
+<script async defer src=https://buttons.github.io/buttons.js></script>
+<script type=text/javascript src=/js/scripts.min.eaf147370baecdd07c022597db631f99cab1c9cd6479de586f30327a568d6a0f.js></script>
+</body>
+</html>

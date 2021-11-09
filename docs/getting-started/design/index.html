@@ -1,0 +1,360 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Design - MicroShift.io</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=icon href=https://microshift.io/favicon.png>
+<link rel=stylesheet href=/css/style.min.6719d72e323121369d5caeb4264b95d8a63cf1deaab029da67602fe5a046e0a4.css>
+<link rel=stylesheet href=/css/admonition.min.d6eb578b3fe0c600dbd09a9bd27c5df86cbb30bbe9c9490df10f3ff46bd49a5b.css>
+<link rel=stylesheet href=/css/search.min.b3a567381af326a096422275c22a08b280ce4129812d6644a4f27053e5324303.css>
+</head>
+<body class="page page-default-single">
+<div id=main-menu-mobile class=main-menu-mobile>
+<ul>
+<li class="menu-item-🏠 home">
+<a href=/>
+<span>🏠 Home</span>
+</a>
+</li>
+<li class="menu-item-📚 microshift">
+<a href=/docs>
+<span>📚 MicroShift</span>
+</a>
+</li>
+<li class="menu-item-📚 about">
+<a href=/docs/about/about>
+<span>📚 About</span>
+</a>
+</li>
+<li class="menu-item-🧭 getting started">
+<a href=/docs/getting-started>
+<span>🧭 Getting Started</span>
+</a>
+</li>
+<li class="menu-item-⛑️ user documentation">
+<a href=/docs/user-documentation/>
+<span>⛑️ User Documentation</span>
+</a>
+</li>
+<li class="menu-item-🖥️ developer documentation">
+<a href=/docs/developer-documentation>
+<span>🖥️ Developer Documentation</span>
+</a>
+</li>
+<li class="menu-item-❤️ community">
+<a href=/docs/community/community>
+<span>❤️ Community</span>
+</a>
+</li>
+<li class="menu-item-🔍 search">
+<a href=/search>
+<span>🔍 Search</span>
+</a>
+</li>
+</ul>
+</div>
+<div class=wrapper>
+<div class=header>
+<div class=container>
+<div class=logo>
+<a href=https://microshift.io><img alt=Logo src=/images/logo.svg></a>
+</div>
+<div class=logo-mobile>
+<a href=https://microshift.io><img alt=Logo src=/images/logo-mobile.svg></a>
+</div>
+<div id=main-menu class=main-menu>
+<ul>
+<li class="menu-item-🏠 home">
+<a href=/>
+<span>🏠 Home</span>
+</a>
+</li>
+<li class="menu-item-📚 microshift">
+<a href=/docs>
+<span>📚 MicroShift</span>
+</a>
+</li>
+<li class="menu-item-📚 about">
+<a href=/docs/about/about>
+<span>📚 About</span>
+</a>
+</li>
+<li class="menu-item-🧭 getting started">
+<a href=/docs/getting-started>
+<span>🧭 Getting Started</span>
+</a>
+</li>
+<li class="menu-item-⛑️ user documentation">
+<a href=/docs/user-documentation/>
+<span>⛑️ User Documentation</span>
+</a>
+</li>
+<li class="menu-item-🖥️ developer documentation">
+<a href=/docs/developer-documentation>
+<span>🖥️ Developer Documentation</span>
+</a>
+</li>
+<li class="menu-item-❤️ community">
+<a href=/docs/community/community>
+<span>❤️ Community</span>
+</a>
+</li>
+<li class="menu-item-🔍 search">
+<a href=/search>
+<span>🔍 Search</span>
+</a>
+</li>
+</ul>
+</div>
+<button id=toggle-main-menu-mobile class="hamburger hamburger--slider" type=button>
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+</div>
+</div>
+<div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+<div class=row>
+<div class="col-12 col-md-3 mb-3">
+<div class=sidebar>
+<aside>
+<ul>
+<li>
+<a href=/>
+<span>🏠 Home</span>
+</a>
+</li>
+<li>
+<a href=/docs>
+<span>📚 MicroShift</span>
+</a>
+</li>
+<li>
+<a href=/docs/about/about>
+<span>📚 About</span>
+</a>
+</li>
+<li>
+<a href=/docs/getting-started>
+<span>🧭 Getting Started</span>
+</a>
+</li>
+<li>
+<a href=/docs/user-documentation/>
+<span>⛑️ User Documentation</span>
+</a>
+</li>
+<li>
+<a href=/docs/developer-documentation>
+<span>🖥️ Developer Documentation</span>
+</a>
+</li>
+<li>
+<a href=/docs/community/community>
+<span>❤️ Community</span>
+</a>
+</li>
+<li>
+<a href=/search>
+<span>🔍 Search</span>
+</a>
+</li>
+</ul>
+</aside>
+</div>
+</div>
+<div class="col-12 col-md-9">
+<h1 class=title>Design</h1>
+<div class=content>
+<p>The is a documentation of MicroShift&rsquo;s design goals, design principles, and fundamental design decisions. For details on specific feature enhancements, please refer to the corresponding low-level design documents.</p>
+<h2 id=design-goals>Design Goals</h2>
+<p>MicroShift aims at meeting all of the following design goals:</p>
+<ul>
+<li>
+<p><strong>Optimized for field-deployment:</strong></p>
+<ul>
+<li>Provisioning and replacing devices running MicroShift is &ldquo;plug&play&rdquo;<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>; MicroShift does not add friction to this.
+<ul>
+<li>e.g. auto-configuring, auto-clustering</li>
+</ul>
+</li>
+<li>MicroShift works seamlessly under adverse network conditions.
+<ul>
+<li>e.g. disconnected or rarely connected, NAT&rsquo;ed or firewalled, changing IP addresses, IPv4 or v6, high latency / low bandwidth, no control over local network (DNS, DHCP, LBN, GW), connectivity via LTE dongle (i.e. no LAN)</li>
+</ul>
+</li>
+<li>MicroShift operates autonomously; it does not require external orchestration.</li>
+<li>MicroShift is safe to change<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>; it has means to automatically recover from faulty software or configuration updates that would render it unmanageable or non-operational.</li>
+<li>MicroShift is secure<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> even in environments without physical access security.</li>
+</ul>
+</li>
+<li>
+<p><strong>Production-grade:</strong></p>
+<ul>
+<li>MicroShift supports deployments with 1 or 3 control plane and 0..N worker instances.</li>
+<li>MicroShift can be deployed containerized on Podman or Docker or non-containerized via RPM and managed via systemd; it is compatible with <code>rpm-ostree</code>-based systems.</li>
+<li>MicroShift&rsquo;s lifecycle is decoupled from the underlying OS&rsquo;s lifecycle.</li>
+<li>MicroShift can be deployed such that updates or changes to it do not disrupt running workloads.</li>
+<li>MicroShift meets DISA STIG and FedRAMP security requirements; it runs as non-privileged workload and supports common CVE and auditing workflows.</li>
+<li>MicroShift allows segregation between the &ldquo;edge device administrator&rdquo; and the &ldquo;edge service development and operations&rdquo; personas.
+<ul>
+<li>the former being responsible for device+OS lifecycle and installing MicroShift as a workload, the latter being responsible for services on and resources of the MicroShift cluster</li>
+</ul>
+</li>
+<li>MicroShift provides application-level events and metrics for observability.</li>
+</ul>
+</li>
+<li>
+<p><strong>Usability:</strong></p>
+<ul>
+<li>MicroShift does not require Kubernetes-expertise to configure, deploy, or lifecycle-manage it; Linux admins will find it behaves like any other Linux workload.</li>
+<li>MicroShift does not require Kubernetes-experts to learn new techniques; Kubernetes developers and operations teams will find it supports their tools and processes.</li>
+<li>MicroShift is highly opinionated, working with minimal/no configuration out of the box, but offers escape hatches for advanced users.</li>
+</ul>
+</li>
+<li>
+<p><strong>Small resource footprint:</strong></p>
+<ul>
+<li>MicroShift makes frugal use of system resources. It runs on &lt;1GB RAM and &lt;1 CPU core (Intel Atom- or ARM Cortex-class). It consumes &lt;500MB on the wire (per install/update) and &lt;1GB at rest (excl. etcd state).</li>
+</ul>
+</li>
+<li>
+<p><strong>Consistency with OpenShift:</strong></p>
+<ul>
+<li>MicroShift runs all workloads that OpenShift runs, except those which depend on OpenShift&rsquo;s cluster operators.</li>
+<li>MicroShift clusters can be managed like OpenShift clusters through <a href=https://github.com/open-cluster-management>Open Cluster Management</a>, except where functions depend on OpenShift&rsquo;s cluster operators.</li>
+</ul>
+</li>
+</ul>
+<h2 id=design-principles>Design Principles</h2>
+<p>When deciding between different design options, we follow the following principles:</p>
+<ul>
+<li><strong>Minimal core</strong>: We keep MicroShift to a minimal set of functionality, but provide mechanisms for extension.
+<ul>
+<li>Discriminator: If a functionality can be added post-cluster-up with reasonable effort, then it should not be part of the MicroShift core/binary.</li>
+</ul>
+</li>
+<li><strong>Minimal configuration</strong>: We minimize the number of configuration parameters exposed to users. Where parameters cannot be avoided, we provide robust defaults or try to auto-configure them.
+<ul>
+<li>Discriminator: If a parameter can be infered from another parameter, auto-detected, or only covers rare use cases, then likely it should not be exposed to users.</li>
+</ul>
+</li>
+<li><strong>Robustness to failure modes</strong>: We expect and gracefully handle failure modes stemming from field-deployment and that MicroShift is just an app on somebody else&rsquo;s OS it cannot control.</li>
+<li><strong>Production over Development</strong>: We engineer for production-deployments, not Kubernetes application development environments.</li>
+<li><strong>Frugal use of resources</strong>: We are mindful of MicroShift&rsquo;s resources consumption, considering all resources (memory, CPU, storage I/O, network I/O).</li>
+<li><strong>No premature resouce optimization</strong>: We do not attempt to squeeze out the last 20% of resouces, e.g. by patching or compressing code, inventing lighter-weight components, etc.</li>
+<li><strong>Ease-of-Use</strong>: We make MicroShift intutive and simple to use, even if that means providing fewer features and options.</li>
+<li><strong>Prefer well-established mechanisms</strong>: We meet users where they are by letting them use well-established tools and patterns rather than requiring them to learn new ones.</li>
+<li><strong>Cheap Control Plane Restarts</strong>: We keep MicroShift restarts cheap (= fast, low resource consumption, low workload impact, etc.) as it is our default model for software and configuration changes.</li>
+<li><strong>Alignment with OpenShift</strong>: We reuse OpenShift&rsquo;s code, operational logic, and production chain tools and processes where possible with reasonable effort, unless this would conflict with MicroShift&rsquo;s goals.</li>
+</ul>
+<h2 id=design-decisions>Design Decisions</h2>
+<h3 id=overall-architecture>Overall Architecture</h3>
+<ul>
+<li>MicroShift is an application deployed onto a running OS, preferably as container on <code>podman</code>, managed through <code>systemd</code>. As such, it cannot assume any responsiblity or control over the device or OS it runs on, including OS software or configuration updates or typical device management tasks such as configuring host CA certs or host telemetry.</li>
+<li>MicroShift runs as a single binary embedding as goroutines only those services strictly necessary to bring up a <em>minimal Kubernetes/OpenShift control and data plane</em>. Motivation:
+<ul>
+<li>Maximizes reproducibility; cluster will come up fully or not at all.</li>
+<li>Does not require external orchestration, for example through operators, and allows for very fast start-up/update times.</li>
+<li>Makes it simple to grok as workload for a a Linux admin persona, works well / easier to implement with systemd.</li>
+<li>Smaller resource footprint has <em>not</em> been a motivation, it may be a welcome side-effect.</li>
+</ul>
+</li>
+<li>MicroShift provides a small, optional set of infrastructure services to support common use cases and reuses OpenShift&rsquo;s container images for these:
+<ul>
+<li>openshift-dns, openshift-router, service-ca, local storage provider</li>
+</ul>
+</li>
+<li>MicroShift instances (processes) run directly on the host or containerized on Podman. They can take on the roles of Control Plane, Node, or both:
+<ul>
+<li>Instances with Control Plane role run etcd and the Kubernetes and OpenShift control plane services. As these services don&rsquo;t require a kubelet, pure Control Plane instances are not nodes in the Kubernetes sense and require fewer system privileges.</li>
+<li>Instances with Node role run a kubelet (and thus register as node) and kube-proxy and interface with CRI-O for running workloads. They may thus require higher system privileges.</li>
+</ul>
+</li>
+<li>While it&rsquo;s possible to run a single MicroShift instance with both Control Plane and Node roles, there may be reasons to run two instances - one Control Plane and one Node - on the same host, e.g. to run the Control Plane with fewer privileges for security reasons. Implementation decisions should consider this.</li>
+<li>MicroShift does not bundle any OS user space! Bundling makes maintenance and security hard, breaks compliance. Instead, user space is provided by the host OS, the container image base layer or a sidecar container.</li>
+</ul>
+<h3 id=cli>CLI</h3>
+<ul>
+<li>The <code>microshift</code> binary runs the Control Plane / Node process, it is not a tool to manage or be clients to those processes (like <code>oc</code> or <code>kubeadmin</code>). This is reflected in the sub-commands and paraemters offered by it, e.g. using the <code>run</code> verb (which implies run-to-cancel/run-to-completion) instead of <code>start</code>/<code>stop</code> verb-pairs (which imply asynch commands that return immediately).</li>
+<li>For consistency and to play nicely with systemd, we avoid command line parameters that would need to be different between invokations (e.g. first-run vs subsequent runs) or instantiations (e.g. 1st Control Plane instances vs. 2nd or 3rd Control Plane instance).</li>
+</ul>
+<h3 id=configuration>Configuration</h3>
+<ul>
+<li>MicroShift uses a strictly declarative style of configuration.</li>
+<li>MicroShift uses as few configuration options as possible. Where it provides configuration options, they are intuitive and have sensible defauls respectively are auto-configured.</li>
+<li>MicroShift is preferably configured through config files, but allows overriding of parameters via environment variables (for use in containers, systemd) and command line flags (for ad-hoc use).</li>
+<li>MicroShift can use both user-local and system-wide configuration.</li>
+</ul>
+<h3 id=security>Security</h3>
+<ul>
+<li>MicroShift instances should run with least privileges. In particular Control Plane-only instances should run completely non-privileged.</li>
+<li>MicroShift should minimize the number of open network ports. In particular Node-only instances should not open any listening ports.</li>
+<li>Assume there is no way to access the device or MicroShift instance from remote, i.e. no SSH access nor Kubernetes API access (for kubectl). Instead, communication is <em>always</em> initiated from the device / cluster towards the management system.</li>
+<li>Open issues / questions:
+<ul>
+<li>Model for joining nodes to MicroShift clusters.</li>
+<li>Model for certificate rotation.</li>
+<li>Requirements for FedRAMP and DISA STIG compliance.</li>
+<li>How to leverage / support the host OS&rsquo;s features for FIDO Device Onboard, remote attestation, integrity measurement architecture.</li>
+<li>How to support secure supply chain.</li>
+</ul>
+</li>
+</ul>
+<h3 id=networking>Networking</h3>
+<ul>
+<li>Host networking is configured by device management. MicroShift has to work with what it&rsquo;s been given by the host OS.</li>
+<li>No Multus.</li>
+<li>Open issues / questions:
+<ul>
+<li>Lightweight CNI?</li>
+<li>API Load Balancing?</li>
+<li>Service Load Balancing?</li>
+<li>Ingress?</li>
+</ul>
+</li>
+</ul>
+<h3 id=storage>Storage</h3>
+<ul>
+<li>MicroShift defaults to local ephemeral storage (enough for basic use cases).</li>
+<li>Open issues / questions:
+<ul>
+<li>Provide escape hatch to add own CSI (which?).</li>
+</ul>
+</li>
+</ul>
+<h3 id=production--supply-chain--release-management>Production / Supply Chain / Release Management</h3>
+<ul>
+<li>MicroShift vendors OKD source code without modification. Where it deploys container images for additional services, it deploys OKD&rsquo;s published container images, not the OpenShift downstream&rsquo;s.</li>
+<li>MicroShift&rsquo;s versioning scheme follows OKD&rsquo;s. This scheme signals the base OpenShift version (4.x) and order/age of builds, but intentionally avoids signaling patch level, backward compatibility (as SemVer, for example), or stability.</li>
+<li>We ensure the tip of our development branch is deployable and while MicroShift is still early days and experimental we expect developers (and users who want the &ldquo;latest&rdquo;) to build & deploy from source.</li>
+<li>Releases are mainly provided for convenience to users that just want to give MicroShift a quick try without friction. They are cut irregularly, e.g. to make a new feature available.</li>
+<li>When rebasing onto a new OKD version, we vendor that version&rsquo;s packages and update the container image digests of the infrastructure services MicroShift deploys, i.e. the &ldquo;release metadata&rdquo; is baked into the MicroShift binary.</li>
+<li>Eventually, we expect there to be a &ldquo;MicroShift Release Image&rdquo; that is based on / derived from the OpenShift Release Image: It references the MicroShift container image plus the subset of container images shared with and published by OpenShift. Defining a release image should allow to reuse the proven OpenShift CI and release tooling later.</li>
+</ul>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p>when used in combination with an edge-optimized OS like RHEL 4 Edge or Fedora IoT&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<center>
+<a class=github-button href=https://github.com/redhat-et/microshift data-icon=octicon-cloud-download aria-label="redhat-et/microshift on GitHub">MicroShift</a>
+<a class=github-button href=https://github.com/redhat-et/microshift data-icon=octicon-star aria-label="Star redhat-et/microshift on GitHub">Star</a>
+<a class=github-button href=https://github.com/redhat-et/microshift/fork data-icon=octicon-repo-forked aria-label="Fork redhat-et/microshift on GitHub">Fork</a>
+<a class=github-button href=https://github.com/redhat-et/microshift/issues data-icon=octicon-issue-opened aria-label="Issue redhat-et/microshift on GitHub">Issue</a>
+<p>Built with <a href=https://github.com/zerostaticthemes/hugo-whisper-theme>whisper-theme</a> from <a href=http://gohugo.io/>Hugo</a></p>
+</center>
+<script async defer src=https://buttons.github.io/buttons.js></script>
+<script type=text/javascript src=/js/scripts.min.eaf147370baecdd07c022597db631f99cab1c9cd6479de586f30327a568d6a0f.js></script>
+</body>
+</html>

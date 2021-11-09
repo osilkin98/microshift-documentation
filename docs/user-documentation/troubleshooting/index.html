@@ -1,0 +1,220 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>Troubleshooting - MicroShift.io</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=icon href=https://microshift.io/favicon.png>
+<link rel=stylesheet href=/css/style.min.6719d72e323121369d5caeb4264b95d8a63cf1deaab029da67602fe5a046e0a4.css>
+<link rel=stylesheet href=/css/admonition.min.d6eb578b3fe0c600dbd09a9bd27c5df86cbb30bbe9c9490df10f3ff46bd49a5b.css>
+<link rel=stylesheet href=/css/search.min.b3a567381af326a096422275c22a08b280ce4129812d6644a4f27053e5324303.css>
+</head>
+<body class="page page-default-single">
+<div id=main-menu-mobile class=main-menu-mobile>
+<ul>
+<li class="menu-item-🏠 home">
+<a href=/>
+<span>🏠 Home</span>
+</a>
+</li>
+<li class="menu-item-📚 microshift">
+<a href=/docs>
+<span>📚 MicroShift</span>
+</a>
+</li>
+<li class="menu-item-📚 about">
+<a href=/docs/about/about>
+<span>📚 About</span>
+</a>
+</li>
+<li class="menu-item-🧭 getting started">
+<a href=/docs/getting-started>
+<span>🧭 Getting Started</span>
+</a>
+</li>
+<li class="menu-item-⛑️ user documentation">
+<a href=/docs/user-documentation/>
+<span>⛑️ User Documentation</span>
+</a>
+</li>
+<li class="menu-item-🖥️ developer documentation">
+<a href=/docs/developer-documentation>
+<span>🖥️ Developer Documentation</span>
+</a>
+</li>
+<li class="menu-item-❤️ community">
+<a href=/docs/community/community>
+<span>❤️ Community</span>
+</a>
+</li>
+<li class="menu-item-🔍 search">
+<a href=/search>
+<span>🔍 Search</span>
+</a>
+</li>
+</ul>
+</div>
+<div class=wrapper>
+<div class=header>
+<div class=container>
+<div class=logo>
+<a href=https://microshift.io><img alt=Logo src=/images/logo.svg></a>
+</div>
+<div class=logo-mobile>
+<a href=https://microshift.io><img alt=Logo src=/images/logo-mobile.svg></a>
+</div>
+<div id=main-menu class=main-menu>
+<ul>
+<li class="menu-item-🏠 home">
+<a href=/>
+<span>🏠 Home</span>
+</a>
+</li>
+<li class="menu-item-📚 microshift">
+<a href=/docs>
+<span>📚 MicroShift</span>
+</a>
+</li>
+<li class="menu-item-📚 about">
+<a href=/docs/about/about>
+<span>📚 About</span>
+</a>
+</li>
+<li class="menu-item-🧭 getting started">
+<a href=/docs/getting-started>
+<span>🧭 Getting Started</span>
+</a>
+</li>
+<li class="menu-item-⛑️ user documentation">
+<a href=/docs/user-documentation/>
+<span>⛑️ User Documentation</span>
+</a>
+</li>
+<li class="menu-item-🖥️ developer documentation">
+<a href=/docs/developer-documentation>
+<span>🖥️ Developer Documentation</span>
+</a>
+</li>
+<li class="menu-item-❤️ community">
+<a href=/docs/community/community>
+<span>❤️ Community</span>
+</a>
+</li>
+<li class="menu-item-🔍 search">
+<a href=/search>
+<span>🔍 Search</span>
+</a>
+</li>
+</ul>
+</div>
+<button id=toggle-main-menu-mobile class="hamburger hamburger--slider" type=button>
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+</div>
+</div>
+<div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+<div class=row>
+<div class="col-12 col-md-3 mb-3">
+<div class=sidebar>
+<aside>
+<ul>
+<li>
+<a href=/>
+<span>🏠 Home</span>
+</a>
+</li>
+<li>
+<a href=/docs>
+<span>📚 MicroShift</span>
+</a>
+</li>
+<li>
+<a href=/docs/about/about>
+<span>📚 About</span>
+</a>
+</li>
+<li>
+<a href=/docs/getting-started>
+<span>🧭 Getting Started</span>
+</a>
+</li>
+<li>
+<a href=/docs/user-documentation/>
+<span>⛑️ User Documentation</span>
+</a>
+</li>
+<li>
+<a href=/docs/developer-documentation>
+<span>🖥️ Developer Documentation</span>
+</a>
+</li>
+<li>
+<a href=/docs/community/community>
+<span>❤️ Community</span>
+</a>
+</li>
+<li>
+<a href=/search>
+<span>🔍 Search</span>
+</a>
+</li>
+</ul>
+</aside>
+</div>
+</div>
+<div class="col-12 col-md-9">
+<h1 class=title>Troubleshooting</h1>
+<div class=content>
+<h2 id=on-ec2-with-rhel-84>On EC2 with RHEL 8.4</h2>
+<h3 id=service-ca-cant-be-created>service-ca can&rsquo;t be created</h3>
+<p>If you want to run <code>microshift</code> on EC2 RHEL 8.4(<code>cat /etc/os-release</code>), you might find <a href=https://github.com/redhat-et/microshift/issues/270><code>ingress and service-ca will not stay online</code></a>.</p>
+<p>Inside the failing pods, you might find errors as: <code>10.43.0.1:443: read: connection timed out</code>.</p>
+<p>This a <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1912236#c30">known issue</a> on RHEL 8.4 and will be resolved in 8.5.</p>
+<p>In order to work on RHEL 8.4, you may disable the NetworkManager and reboot to resolve this issue.</p>
+<p>Example:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>systemctl disable nm-cloud-setup.service nm-cloud-setup.timer
+reboot
+</code></pre></div><p>You can find the details of this EC2 NetworkManager issue tracked at <a href=https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/issues/740>issue</a>.</p>
+<h3 id=openshift-pods-crashloopbackoff>OpenShift pods CrashLoopBackOff</h3>
+<p>A few minutes after <code>microshift</code> started, OpenShift pods fall into <code>CrashLoopBackOff</code>.</p>
+<p>If you check up the <code>journalctl |grep iptables</code>, you may see the following:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>
+Sep 21 19:12:54 ip-172-31-85-30.ec2.internal microshift[1297]: I0921 19:12:54.399365    1297 server_others.go:185] Using iptables Proxier.
+Sep 21 19:13:50 ip-172-31-85-30.ec2.internal kernel: iptables[2438]: segfault at 88 ip 00007feaf5dc0e47 sp 00007fff6f2fea08 error 4 in libnftnl.so.11.3.0[7feaf5dbc000+16000]
+Sep 21 19:13:50 ip-172-31-85-30.ec2.internal systemd-coredump[2442]: Process 2438 (iptables) of user 0 dumped core.
+Sep 21 20:35:57 ip-172-31-85-30.ec2.internal microshift[1297]: E0921 20:35:57.914558    1297 remote_runtime.go:143] StopPodSandbox &#34;1ae45abde0b46d8ea5176b6a00f0e5b4291e6bb496762ca25a4196a5f18d0475&#34; from runtime service failed: rpc error: code = Unknown desc = failed to destroy network for pod sandbox k8s_service-ca-64547678c6-2nxnp_openshift-service-ca_6236deba-fc5f-4915-817d-f8699a4accfc_0(1ae45abde0b46d8ea5176b6a00f0e5b4291e6bb496762ca25a4196a5f18d0475): error removing pod openshift-service-ca_service-ca-64547678c6-2nxnp from CNI network &#34;crio&#34;: running [/usr/sbin/iptables -t nat -D POSTROUTING -s 10.42.0.3 -j CNI-d5d0edec163ce01e4591c1c4 -m comment --comment name: &#34;crio&#34; id: &#34;1ae45abde0b46d8ea5176b6a00f0e5b4291e6bb496762ca25a4196a5f18d0475&#34; --wait]: exit status 2: iptables v1.8.4 (nf_tables): Chain &#39;CNI-d5d0edec163ce01e4591c1c4&#39; does not exist
+</code></pre></div><p>Also, the <code>openshift-ingress</code> pod will fail on:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-console data-lang=console><span class=go>I0921 17:36:17.811391       1 router.go:262] router &#34;msg&#34;=&#34;router is including routes in all namespaces&#34;
+</span><span class=go>E0921 17:36:17.914638       1 haproxy.go:418] can&#39;t scrape HAProxy: dial unix /var/lib/haproxy/run/haproxy.sock: connect: no such file or directory
+</span><span class=go>I0921 17:36:17.948417       1 router.go:579] template &#34;msg&#34;=&#34;router reloaded&#34;  &#34;output&#34;=&#34; - Checking http://localhost:80 ...\n - Health check ok : 0 retry attempt(s).\n&#34;
+</span></code></pre></div><p>As a workaround, you can follow steps below:</p>
+<ul>
+<li>
+<p>delete <code>flannel</code> <code>daemonset</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>kubectl delete ds -n kube-system kube-flannel-ds
+</code></pre></div></li>
+<li>
+<p>restart all the OpenShift pods.</p>
+</li>
+</ul>
+<p>This workaround won&rsquo;t affect the single node <code>microshift</code> functionality since the <code>flannel</code> <code>daemonset</code> is used for multi-node MicroShift.</p>
+<p>This issue is tracked at: <a href=https://github.com/redhat-et/microshift/issues/296>#296</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<center>
+<a class=github-button href=https://github.com/redhat-et/microshift data-icon=octicon-cloud-download aria-label="redhat-et/microshift on GitHub">MicroShift</a>
+<a class=github-button href=https://github.com/redhat-et/microshift data-icon=octicon-star aria-label="Star redhat-et/microshift on GitHub">Star</a>
+<a class=github-button href=https://github.com/redhat-et/microshift/fork data-icon=octicon-repo-forked aria-label="Fork redhat-et/microshift on GitHub">Fork</a>
+<a class=github-button href=https://github.com/redhat-et/microshift/issues data-icon=octicon-issue-opened aria-label="Issue redhat-et/microshift on GitHub">Issue</a>
+<p>Built with <a href=https://github.com/zerostaticthemes/hugo-whisper-theme>whisper-theme</a> from <a href=http://gohugo.io/>Hugo</a></p>
+</center>
+<script async defer src=https://buttons.github.io/buttons.js></script>
+<script type=text/javascript src=/js/scripts.min.eaf147370baecdd07c022597db631f99cab1c9cd6479de586f30327a568d6a0f.js></script>
+</body>
+</html>
